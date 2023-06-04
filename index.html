@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Weather App</title>
+</head>
+<body>
+    
+    <div class="w-[100vw] h-[100vh] overflow-auto font-rubik wrapper bg-gradient-to-b from-cyan-700 to-cyan-900 pt-[2em]" >
+
+        <div class="w-[60%] m-auto text-white ">
+            <div class="font-rubik font-semibold text-3xl uppercase text-center">weather app</div>
+
+            <div class="flex active justify-evenly mt-[4em] tracking-wider hover:cursor-pointer">
+                <p class="yourWeather hover:cursor-pointer p-1 px-2.5 rounded-md tracking-wide">Your Weather</p>
+                <p class="searchWeather hover:cursor-pointer p-1 px-2.5 rounded-md tracking-wide">Search Weather</p>
+            </div>
+
+
+            <div loading="lazy" class="locationAccess hidden mt-[4rem]  flex flex-col justify-center items-center gap-y-[2rem]">
+                <img src="/assets/location.png"
+                     alt="location.jpg"
+                     class="w-[4rem]">
+                <div class="text-2xl font-bold">Grant Location Access</div>
+                <p class="mt-[-1.5rem] text-sm">Allow Access to Get Weather Information</p>
+                <button class="btn uppercase bg-cyan-950 py-1 px-3 rounded-lg appearance-none hover:cursor-pointer">grant access</button>
+
+            </div>
+
+            
+            <!-- showing weather -->
+            <div loading="lazy" class="cityWeather hidden flex flex-col justify-center items-center mt-[4rem]">
+              <div class="flex flex-col justify-center items-center">
+                <div class=" cityAndFlag flex gap-2">
+                    <div class="ml-3 city">City Name</div>
+                    <img src="" alt="" flag class="w-[16px] h-[20px] mt-1">
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <p class="weatherType mt-2">Type</p>
+                    <img src="" alt="" class="weatherTypeIcon">
+                    <div class="temp font-bold text-3xl">Temp</div>
+                </div>
+                    
+              </div>
+    
+                    <!-- cards -->
+                    <div class="card mt-10 flex gap-4 justify-center items-center min-[220px]:flex-wrap">
+
+                        <!-- card1 -->
+                        <div class="card1 bg-slate-400 w-[10rem] h-[10rem] flex flex-col justify-center items-center rounded-md">
+                            <img src="/assets/wind.png" width="50px" alt="">
+                            <p class="uppercase text-slate-200 ">wind speed</p>
+                            <p class="windSpeed mt-2">value</p>
+                        </div>
+
+                        <!-- card2 -->
+                        <div class="card2 bg-slate-400 w-[10rem] h-[10rem] flex flex-col justify-center items-center rounded-md">
+                            <img src="/assets/humidity.png" width="45px" alt="">
+                            <p class="mt-1 uppercase text-slate-200">humidity</p>
+                            <p class="humidity mt-2"></p>
+                        </div>
+
+                 
+                        <div class="bg-slate-400 w-[10rem] h-[10rem] flex flex-col justify-center items-center rounded-md">
+                            <img src="/assets/cloud.png" width="50px" alt="">
+                            <p class="text-slate-200 uppercase">clouds</p>
+                            <p class="cloudiness mt-2"></p>
+                        </div>
+                    </div>
+
+                </div>
+              
+            
+                <!-- search form  -->
+                <form loading="lazy" class=" form hidden flex justify-center items-center gap-2 mt-[4.5rem]">
+                    <input placeholder="Search for city ..." type="text" 
+                           class="input focus:outline-white rounded-lg bg-slate-300 font-bold w-[40%] h-7 p-2.5 text-black">
+                    <button class="search rounded-full w-[2rem] bg-cyan-900 flex justify-center items-center p-1.5">
+                        <img src="assets/search.png" alt="" width="18px">
+                    </button>
+                </form>
+
+
+                <div  loading="lazy" class="mt-4 clock hidden flex  flex-col justify-center items-center">
+                    <img src="assets/loading.gif" alt="" class="w-[150px] gif">
+                    <p class="ml-5 loading text-2xl">Loading ...</p>
+                </div>
+
+                <!-- error  -->
+                <div class="error hidden flex flex-col gap-2 mt-8 justify-center items-center">
+                    <img src="assets/not-found.png" alt="" width="250px">
+                    <p class="notFound text-2xl"></p>
+                </div>
+                
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
